@@ -1,0 +1,54 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="voice-control.VIEW" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:rec="control">
+	<Page title="Title">
+		<content>
+		
+		<!-- <rec:Speach width="70%" id="spoken1"/> -->
+		
+		<Table items="{/employeeCollection}" id="idTable">
+			  <columns>
+				<Column>					
+						<Text text="name"/>	
+				</Column>
+									
+				<Column>
+						<Text text="role"/>	
+				</Column>
+					
+				<Column>
+						<Text text="Department"/>	
+				</Column>			
+			</columns>
+			<headerToolbar>
+					<Toolbar>
+						<content>
+							<SearchField id="searchInputShell" liveChange="onlivechabge" />
+						
+							
+							<Button text="voice" press="voice"  id="clickToSpeak" icon="sap-icon://microphone"/>
+						</content>
+					</Toolbar>
+				</headerToolbar>
+			
+			
+			
+			<items>
+				<ColumnListItem>
+				
+					<cells>
+					
+						<Text text="{name}"/>
+						<Input value="{role}"/>
+						<Button text="{dept}"/>
+						
+					</cells>
+					
+				</ColumnListItem>
+			</items>
+			
+		</Table>
+	
+	
+		</content>
+	</Page>
+</core:View>
